@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        .reg {
+            height: 700px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #45B39D;
+
+        }
+
+        .box {
+            height: 320px;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 30px 20px;
+
+        }
+
+        .n1 {
+            width: 280px;
+            height: 38px;
+            margin-bottom: 5px;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid black;
+        }
+
+        .but1 {
+            width: 260px;
+            height: 38px;
+            font-size: larger;
+            background-color: #0A3EF0;
+            color: white;
+            margin-left: 10px;
+            margin-bottom: 5px;
+            border-radius: 15px;
+        }
+
+        .but1:hover {
+            box-shadow: 5px 5px 2px #888888;
+            background-color: #1A41C5;
+        }
+
+        h1 {
+            text-align: center;
+        }
+        label{
+font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    
+ 
+    <div class="reg">
+
+        <div class="box">
+            <h1>Login</h1>
+
+            
+
+                <br />
+                <label>Username</label><br>
+                <input class="n1" type="text" id="email" name="uname" placeholder="Type your username" /><br />
+                <label>Password</label><br>
+                <input class="n1" type="password" id="pass" name="upass" placeholder="Type your Password" /><br /> <br />
+
+                <button class="but1" type="submit" value="Sign In " onclick="signin()" >SignIn</button><br /><br>
+                
+                <a href="home.jsp">Next</a>
+           
+
+         
+
+        </div>
+
+    </div>
+            
+        
+             
+             
+             
+               <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.7.0/firebase.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyCHsTHIdS7X8UgNQBM6b6mf7m--gsGoqnk",
+      authDomain: "inventory-22fcc.firebaseapp.com",
+      databaseURL: "https://inventory-22fcc-default-rtdb.firebaseio.com",
+      projectId: "inventory-22fcc",
+      storageBucket: "inventory-22fcc.appspot.com",
+      messagingSenderId: "1031516856608",
+      appId: "1:1031516856608:web:f75a9ec7cb3fd6e308b745"
+    };
+  
+    firebase.initializeApp(firebaseConfig);
+
+    const auth = firebase.auth();
+
+function aa(){
+   window.location.assign("http://localhost:8080/CampusRec/home.jsp")  
+}
+
+    function signin()
+{
+
+
+      var email = document.getElementById("email").value;
+      var pass = document.getElementById("pass").value;
+
+    const promise =  auth.signInWithEmailAndPassword(email, pass)
+    .then((userCredential) => {
+    const user = userCredential.user;
+
+sessionStorage.setItem("email", email);
+sessionStorage.setItem("pass", pass);
+
+      window.location.assign("http://localhost:8080/CampusRec/home.jsp")  
+    // alert("signIn sss"+user);
+    // ...
+  })
+  .catch((e) => {
+
+    alert(e);
+  
+  });
+
+
+}
+
+
+  </script>
+
+</body>
+
+</html>
+
+
+

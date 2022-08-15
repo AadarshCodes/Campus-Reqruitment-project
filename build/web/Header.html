@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Page Title</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+
+        <script src='main.js'></script>
+        <style>
+
+            header{
+                height: 70px;
+                background-color: ghostwhite;
+                display: flex;
+                justify-content: space-between;
+                display: flex;
+                overflow: hidden;
+                z-index: 3;
+                position: fixed;
+                width: 100%;
+
+
+            }
+
+            .link{
+                width: 54vw;
+                height: 70px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                text-align: left;
+                padding-right: 285px;
+
+
+            }
+
+            .link a{
+                font-size: medium;
+                font-weight: 600;
+                color:black;
+                text-decoration: none;
+                font-family: Georgia;
+                display: flex;
+                text-align:end;
+                justify-content:space-between;
+            }
+
+            .link a:hover{
+                font-size: 20px;
+                text-decoration: none;
+                color: #F0570A;
+            }
+            .right-menu-navbar{
+                width: 20vw;
+            }
+            .logIn{
+                height: 34px;
+                width: 72.047px;
+                border:  solid blue 1px;
+                border-radius: 15px;
+                margin-top: 20px;
+
+            }
+            .mTxt{
+                height: 40.047px;
+                width: 20px;
+                padding-top: 5px;
+                margin: 0 16 0 16;
+            }
+            .mTxt1{
+                height: 40.047px;
+                width: 20px;
+                padding-top: 5px;
+                margin: 0 16 0 16;
+                color: white;
+            }
+            .Register{
+                height: 34px;
+                width: 95.047px;
+                border:  solid darkorange 1px;
+                border-radius: 15px;
+                margin-top: 20px;
+                margin-left: 16px;
+                background-color: darkorange;
+            }
+        </style>
+    </head>
+    <body>
+
+        <header>
+
+            <!--            <div class="navhead">
+                            <div class="navleft-container">
+                                <a class="logoImage" href="htpps://www.naukri.com" target="_blank">
+                                    <img data-ga-track="Naukri Logo|Naukri Logo" src="https://static.naukimg.com/s/4/100/i/naukri_Logo.png" height="31" width="186">
+                                </a>
+                                <ul class=" middele-menu_container"> 
+                                    <li class="mActive HOME">
+                                        <a title="Search Jobs" href="home.jsp" target="_blank" data-ga-track="Main Navigation Jobs|Jobs Icon">
+                                            <div class="mTxt">HOME</div>
+                                        </a>
+                                    </li>
+                                    <li class=" VACANCY">
+                                        <a title="Explore top companies hiring on Naukri" href="ShowCompData.jsp" target="_blank" data-ga-track="Main Navigation Companies|Companies Icon">
+                                            <div class="mTxt">VACANCY</div>
+                                        </a>
+                                        
+                                    </li>
+                                    <li class=" USER">
+                                        <a title="Explore top companies hiring on Naukri" href="userReg.jsp" target="_blank" data-ga-track="Main Navigation Companies|Companies Icon">
+                                            <div class="mTxt">USER</div>
+                                        </a>
+                                    </li>
+                                    <li class=" COMPANY">
+                                        <a title="Explore top companies hiring on Naukri" href="compReg.jsp" target="_blank" data-ga-track="Main Navigation Companies|Companies Icon">
+                                            <div class="mTxt">COMPANY</div>
+                                        </a>
+                                    </li>
+                                    <li class=" LOGIN">
+                                        <a title="Explore top companies hiring on Naukri" href="login.jsp" target="_blank" data-ga-track="Main Navigation Companies|Companies Icon">
+                                            <div class="mTxt">LOGIN</div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+            
+                        </div>-->
+            <a class="logoImage" href="htpps://www.naukri.com" target="_blank">
+                <img data-ga-track="Naukri Logo|Naukri Logo" src="image/newLogo.png" height="70px" width="250">
+            </a>
+            <div class="link">
+
+                <a href="home.jsp">HOME</a>
+                <a href="ShowCompData.jsp">VACANCY</a>
+                <a href="userReg.jsp">USER</a>
+                <a href="compReg.jsp">COMPANY</a>
+
+
+            </div>
+
+            <ul class="right-menu-navbar" style=" display:flex;">
+                <li class="LogIn">
+                    <a target="_blank" title="Jobseeker Login" href="login.jsp" id="login_Layer" data-ga-track="Main Navigation Login|Login Icon">
+                        <div class="mTxt" style="">Login</div>
+                    </a>
+                </li>
+
+                <li class="Register">
+                    <a target="_blank" title="Jobseeker Register" href="userReg.jsp" id="register_Layer" data-ga-track="Main Navigation Register|Register Icon">
+                        <div class="mTxt1">Register</div>
+                    </a>
+                </li>
+            </ul>
+        </header>
+
+    </body>
+</html>
